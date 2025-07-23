@@ -37,7 +37,7 @@ static const char *UNIT[] = {
   "nine",
   "ten",
   "eleven",
-  "tweleve",
+  "twelve",
   "thirteen",
   "fourteen",
   "fifteen",
@@ -52,7 +52,7 @@ static const char *TENS[] = {
   "ten",
   "twenty",
   "thirty",
-  "fourty",
+  "forty",
   "fifty",
   "sixty",
   "seventy",
@@ -103,8 +103,6 @@ num_to_words (char *dst, size_t len, uint32_t num)
   char *cur = dst;
   uint32_t ex, val, msd, rem;
   int written = 0;
-
-  memset (dst, 'x', len);
 
   if (num >= 1000)
     {

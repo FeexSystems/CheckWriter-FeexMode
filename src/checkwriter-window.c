@@ -83,7 +83,7 @@ checkwriter_window_on_entry_changed (GtkEntry *entry, gpointer user_data)
       sscanf (text, "%'u.%u", &dollars, &cents);
 
       /* Write the parsed dollar amount */
-      g_snprintf (window->check_data.amount, STRING_LEN, "%'u.%02u", dollars, cents);
+      g_snprintf (window->check_data.amount, STRING_LEN, "%u.%02u", dollars, cents);
 
       /* Write the amount in words */
       do

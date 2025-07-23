@@ -210,12 +210,11 @@ check_data_set_sample (CheckData *check_data)
 {
   if (check_data)
     {
-      /* TODO: Remove hard coded constants and fill them with pattern instead  */
-      snprintf (check_data->date, STRING_LEN, "MM/DD/YYYY");
-      setcharx (check_data->name, 'X', 44);
-      setcharx (check_data->amount, 'X', 10);
-      setcharx (check_data->amount_in_words, 'X', 52);
-      setcharx (check_data->memo, 'X', 26);
+      g_strlcpy (check_data->date, "MM/DD/YYYY", STRING_LEN);
+      g_strlcpy (check_data->name, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", STRING_LEN);
+      g_strlcpy (check_data->amount, "XXXXXXXXXX", STRING_LEN);
+      g_strlcpy (check_data->amount_in_words, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", STRING_LEN);
+      g_strlcpy (check_data->memo, "XXXXXXXXXXXXXXXXXXXXXXXXXX", STRING_LEN);
     }
 }
 
